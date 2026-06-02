@@ -10,6 +10,8 @@ list_products → get_product → list_asks → get_ask → whoami
 
 ## Install
 
+Works with any MCP-compliant client. The canonical run command is `npx -y icantmarket-mcp` over stdio, with `ICANTMARKET_API_TOKEN` exported in the env if you want the write tools.
+
 ### Claude Code
 
 ```bash
@@ -17,9 +19,20 @@ claude mcp add icantmarket --env ICANTMARKET_API_TOKEN=ic_xxx \
   -- npx -y icantmarket-mcp
 ```
 
-### Claude Desktop
+### OpenAI Codex CLI
 
-Add to `claude_desktop_config.json`:
+Add to `~/.codex/config.toml`:
+
+```toml
+[mcp_servers.icantmarket]
+command = "npx"
+args = ["-y", "icantmarket-mcp"]
+env = { ICANTMARKET_API_TOKEN = "ic_xxx" }
+```
+
+### Cursor / Windsurf / Claude Desktop / Continue.dev / Zed / Cline
+
+Same JSON shape for all of them. Drop into `~/.cursor/mcp.json`, `claude_desktop_config.json`, `~/.continue/config.json`, your Zed `settings.json` under `context_servers`, or wherever the client expects MCP server definitions:
 
 ```json
 {
@@ -33,20 +46,12 @@ Add to `claude_desktop_config.json`:
 }
 ```
 
-### Cursor
+### MCPier
 
-Add to your `mcp.json`:
+It's in the official catalog:
 
-```json
-{
-  "mcpServers": {
-    "icantmarket": {
-      "command": "npx",
-      "args": ["-y", "icantmarket-mcp"],
-      "env": { "ICANTMARKET_API_TOKEN": "ic_xxx" }
-    }
-  }
-}
+```bash
+pier install icantmarket-mcp
 ```
 
 ## Get a token
