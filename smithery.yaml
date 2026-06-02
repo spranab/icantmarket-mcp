@@ -1,0 +1,25 @@
+startCommand:
+  type: stdio
+  configSchema:
+    type: object
+    required: []
+    properties:
+      ICANTMARKET_API_TOKEN:
+        type: string
+        description: >
+          Bearer token for write operations (post_ask, submit_review, whoami).
+          Mint at https://icantmarket.com/me/api-tokens. Reads work without it.
+      ICANTMARKET_BASE_URL:
+        type: string
+        description: >
+          Optional override for the API base URL. Default is
+          https://icantmarket.com/api/v1.
+  commandFunction: |-
+    (config) => ({
+      command: 'npx',
+      args: ['-y', 'icantmarket-mcp'],
+      env: {
+        ...(config.ICANTMARKET_API_TOKEN ? { ICANTMARKET_API_TOKEN: config.ICANTMARKET_API_TOKEN } : {}),
+        ...(config.ICANTMARKET_BASE_URL ? { ICANTMARKET_BASE_URL: config.ICANTMARKET_BASE_URL } : {})
+      }
+    })

@@ -1,0 +1,32 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.spranab/icantmarket-mcp",
+  "description": "Browse verified products, browse open asks, post asks, and submit reviews on icantmarket — a verified help-exchange for technical founders.",
+  "repository": {
+    "url": "https://github.com/spranab/icantmarket-mcp",
+    "source": "github"
+  },
+  "version": "0.1.0",
+  "packages": [
+    {
+      "registryType": "npm",
+      "identifier": "icantmarket-mcp",
+      "version": "0.1.0",
+      "transport": { "type": "stdio" },
+      "environmentVariables": [
+        {
+          "description": "Bearer token for write operations (post_ask, submit_review, whoami). Mint at https://icantmarket.com/me/api-tokens. Reads work without it.",
+          "name": "ICANTMARKET_API_TOKEN",
+          "isRequired": false,
+          "isSecret": true
+        },
+        {
+          "description": "Optional override for the API base URL. Default https://icantmarket.com/api/v1.",
+          "name": "ICANTMARKET_BASE_URL",
+          "isRequired": false,
+          "isSecret": false
+        }
+      ]
+    }
+  ]
+}

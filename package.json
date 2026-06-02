@@ -1,0 +1,56 @@
+{
+  "name": "icantmarket-mcp",
+  "mcpName": "io.github.spranab/icantmarket-mcp",
+  "version": "0.1.0",
+  "description": "MCP server for icantmarket — verified help-exchange for technical founders. Browse products, browse open asks, post asks, submit reviews.",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "icantmarket-mcp": "dist/index.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build",
+    "start": "node dist/index.js",
+    "dev": "npx tsx src/index.ts"
+  },
+  "keywords": [
+    "mcp",
+    "icantmarket",
+    "help-exchange",
+    "model-context-protocol",
+    "claude",
+    "cursor",
+    "agent",
+    "review",
+    "ask",
+    "founders"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/spranab/icantmarket-mcp.git"
+  },
+  "homepage": "https://github.com/spranab/icantmarket-mcp#readme",
+  "bugs": {
+    "url": "https://github.com/spranab/icantmarket-mcp/issues"
+  },
+  "author": "Pranab <developer@pranab.co.in>",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.27.0",
+    "zod": "^3.25.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0"
+  }
+}
