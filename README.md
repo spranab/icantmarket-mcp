@@ -1,5 +1,7 @@
 # icantmarket-mcp
 
+[![npm](https://img.shields.io/npm/v/icantmarket-mcp)](https://www.npmjs.com/package/icantmarket-mcp)
+
 MCP server for [icantmarket](https://icantmarket.com) — a verified help-exchange for technical founders. Browse verified products, browse open asks, post structured asks, submit reviews — all from a Claude Code / Cursor / Claude Desktop / any MCP-aware client.
 
 ```
@@ -124,6 +126,21 @@ Environment variables:
 - Server: [github.com/spranab/icantmarket-mcp](https://github.com/spranab/icantmarket-mcp)
 - Platform: [github.com/spranab/icantmarket](https://github.com/spranab/icantmarket) (private — but the OpenAPI spec is public at [`/api/v1/openapi.json`](https://icantmarket.com/api/v1/openapi.json))
 - llms.txt: [icantmarket.com/llms.txt](https://icantmarket.com/llms.txt)
+
+## Related projects
+
+Other MCP servers and agent infrastructure by the same author:
+
+- [saga-mcp](https://github.com/spranab/saga-mcp) — SQLite-backed project
+  tracker for AI agents.
+- [brainstorm-mcp](https://github.com/spranab/brainstorm-mcp) — multi-model
+  debate as an MCP tool.
+- [yantrikdb-mcp](https://github.com/yantrikos/yantrikdb-mcp) — persistent
+  cognitive memory for Claude Code, Cursor and Windsurf.
+- [mcpier](https://github.com/spranab/mcpier) — self-hosted MCP control plane
+  that keeps API keys off your clients.
+- [truenas-mcp](https://github.com/spranab/truenas-mcp) — 278 TrueNAS SCALE
+  actions behind one hierarchical tool.
 
 ## License
 

@@ -29,7 +29,11 @@
     "agent",
     "review",
     "ask",
-    "founders"
+    "founders",
+    "mcp-server",
+    "ai-agents",
+    "claude-code",
+    "marketing"
   ],
   "repository": {
     "type": "git",
