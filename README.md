@@ -1,6 +1,14 @@
 # icantmarket-mcp
 
 [![npm](https://img.shields.io/npm/v/icantmarket-mcp)](https://www.npmjs.com/package/icantmarket-mcp)
+[![npm downloads](https://img.shields.io/npm/dm/icantmarket-mcp)](https://www.npmjs.com/package/icantmarket-mcp)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
+
+You shipped the thing and now it sits at zero users, because promoting it is a
+different job than building it. icantmarket is a verified help-exchange where
+technical founders trade that work with each other — and this server puts it
+in the tool you already have open, so asking for help doesn't cost you a
+context switch.
 
 MCP server for [icantmarket](https://icantmarket.com) — a verified help-exchange for technical founders. Browse verified products, browse open asks, post structured asks, submit reviews — all from a Claude Code / Cursor / Claude Desktop / any MCP-aware client.
 
